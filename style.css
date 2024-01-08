@@ -5,22 +5,22 @@ body {
   font-family: Lato, sans-serif;
 }
 
-.aaa {
+.info {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.aaa img {
+.info img {
   width: 100%;
 }
 
-.aaa .more_inf {
+.info .more-info__link {
   font-family: fantasy, cursive;
 }
 
-.centered-main-page-element {
+.main-page__element {
   display: block;
   width: 500px;
   margin: 0 auto 0;
@@ -32,7 +32,7 @@ body {
   flex-grow: 1;
 }
 
-.task-row-wrapper {
+.task-row {
   display: flex;
 }
 
@@ -51,7 +51,13 @@ button {
   outline: none;
 }
 
-button {
+button:hover {
+  color: #3a3a3a;
+}
+
+.add-button,
+.edit,
+.delete {
   background: none;
   border: 0px;
   color: #888;
@@ -59,10 +65,6 @@ button {
   width: 60px;
   font-family: Lato, sans-serif;
   cursor: pointer;
-}
-
-button:hover {
-  color: #3a3a3a;
 }
 
 /* Heading */
@@ -100,71 +102,70 @@ label[for="new-task"] {
   margin: 0 0 20px;
 }
 
-input#new-task {
+#new-task {
   width: 318px;
 }
 
 /* Task list */
-li {
+.default-mode,
+.edit-mode {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-li > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.default-mode input[type="checkbox"],
+.edit-mode input[type="checkbox"] {
   margin: 0 10px;
 }
 
-li > label {
+.default-mode label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li > input[type="text"] {
+.default-mode input[type="text"] {
   width: 226px;
 }
 
-button.delete img {
+.delete img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+.delete img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completed-tasks label {
+#completed-tasks label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type="text"] {
+.default-mode input[type="text"] {
   display: none;
 }
 
-ul li.editMode input[type="text"] {
+.edit-mode input[type="text"] {
   display: inline-block;
   width: 224px;
 }
 
-ul li.editMode label {
+.edit-mode label {
   display: none;
 }
 
 @media (max-width: 768px) {
-  .aaa {
+  .info {
     text-align: center;
   }
 }
