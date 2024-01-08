@@ -42,7 +42,8 @@ ul {
 }
 
 li,
-h3 {
+h1,
+h2{
   list-style: none;
 }
 
@@ -68,7 +69,8 @@ button:hover {
 }
 
 /* Heading */
-h3,
+.todo-title,
+.completed-title,
 label[for="new-task"] {
   color: #333;
   font-weight: 700;
